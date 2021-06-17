@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 
-namespace Develo\FactfinderHyvaCompat\ViewModel;
+namespace Develodesign\FactfinderHyvaCompat\ViewModel;
 
 use Magento\Framework\View\Asset\Repository as AssetRepository;
 

@@ -22,12 +22,12 @@ Magento 2.4.2 (Open Source or Commerce), PHP 7.4 are recommended as a minimum*. 
  
 1. Install via composer
 ```
-composer require develo/module-factfinderhyvacompat
+composer require develodesign/module-factfinderhyvacompat
 ```
 
 2. Enable the module
 ```
-bin/magento module:enable Develo_FactfinderHyvaCompat
+bin/magento module:enable Develodesign_FactfinderHyvaCompat
 ```
 
 3. Run setup:upgrade
@@ -42,7 +42,7 @@ bin/magento cache:flush
 
 5. Copy the CSS to your projects Hyvä based theme
 ```
-cp vendor/develo/module-factfinderhyvacompat/view/frontend/web/tailwind/factfinder-bridge/ {PATH_TO_YOUR_THEME}/web/tailwind/theme/factfinder-bridge/
+cp vendor/develodesign/module-factfinderhyvacompat/view/frontend/web/tailwind/factfinder-bridge/ {PATH_TO_YOUR_THEME}/web/tailwind/theme/factfinder-bridge/
 ```
 > Note: Any styling changes you would like to make to the FACT-Finder, do so within the {PATH_TO_YOUR_THEME}/web/tailwind/theme/factfinder-bridge/ folder.
 

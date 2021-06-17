@@ -5,5 +5,5 @@
  */
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Develo_FactfinderHyvaCompat', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Develodesign_FactfinderHyvaCompat', __DIR__);
 
