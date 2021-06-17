@@ -1,0 +1,35 @@
+ff-record {
+  .product-image {
+    &-container {
+      display: block;
+    }
+
+    &-wrapper {
+      padding-bottom: 100%;
+    }
+  }
+
+  .product-item-actions {
+    .actions-primary {
+      display: block;
+    }
+
+    .tocart {
+      width: 100%;
+    }
+  }
+}
+
+.ff-products-per-page {
+  .label {
+    display: none;
+  }
+}
+
+/*.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .ff-products-per-page {
+    .label {
+      display: inline;
+    }
+  }
+}*/

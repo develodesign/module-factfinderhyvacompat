@@ -1,0 +1,22 @@
+{
+    "name": "develo/module-factfinderhyvacompat",
+    "description": "factfinderhyvacompat",
+    "type": "magento2-module",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Mike Sheward",
+            "email": "mike@develodesign.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Develo\\FactfinderHyvaCompat\\": ""
+        }
+    }
+}

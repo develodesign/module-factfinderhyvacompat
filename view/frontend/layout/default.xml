@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header-search">
+            <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" before="-" />
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Develo_FactfinderHyvaCompat::html/header/search-form.phtml</argument>
+            </action>
+            <arguments>
+                <argument name="view_model" xsi:type="object">Develo\FactfinderHyvaCompat\ViewModel\SearchForm</argument>
+            </arguments>
+        </referenceBlock>
+
+        <move element="factfinder.suggest" destination="top.container" before="-" />
+
+    </body>
+</page>
+

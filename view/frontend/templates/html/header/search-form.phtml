@@ -1,0 +1,70 @@
+<?php
+
+use Magento\Framework\Escaper;
+
+/** @var \Develo\FactfinderHyvaCompat\ViewModel\SearchForm $viewModel */
+$viewModel = $block->getViewModel();
+
+/** @var Escaper $escaper */
+
+// In load order.
+$scripts = [
+    'Omikron_Factfinder::ff-web-components/vendor/custom-elements-es5-adapter.js',
+    'Omikron_Factfinder::ff-web-components/vendor/webcomponents-loader.js',
+    'Omikron_Factfinder::ff-web-components/bundle.js'
+];
+
+?>
+
+<script defer>
+    function factfinderBridge() {
+
+        function loadScript (url) {
+
+            let script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            script.setAttribute('src', url);
+            document.head.append(script);
+
+            return new Promise((resolve) => script.addEventListener('load', resolve));
+
+        }
+
+        return {
+            isInitialized: false,
+            loadScripts: function () {
+
+                if (this.isInitialized) { return; }
+
+                var promises = [
+                    <?php foreach($scripts as $scriptUrl): ?>
+                    loadScript('<?= $escaper->escapeJs($viewModel->getAssetUrl($scriptUrl)) ?>'),
+                    <?php endforeach; ?>
+                ];
+
+                // All files loaded, migrate to postInit phase.
+                Promise.all(promises).then(() => {
+                    this.postInit();
+                });
+
+                this.isInitialized = true;
+
+            },
+            preInit: function() {
+                this.loadScripts()
+            },
+            postInit: function() {
+                // console.log('postInit');
+            }
+        };
+
+    }
+</script>
+
+<div
+    x-data="factfinderBridge()"
+    x-init="preInit"
+>
+    <?php echo $block->getChildHtml(); ?>
+</div>
+
