@@ -22,8 +22,8 @@ Magento 2.4.2 (Open Source or Commerce), PHP 7.4 are recommended as a minimum*. 
  
 1. Install via composer
  ```
-composer config repositories.hyva-themes/magento2-amasty-rewards git git@gitlab.hyva.io:hyva-themes/hyva-compat/magento2-amasty-rewards.git
-composer require hyva-themes/magento2-amasty-rewards
+composer config repositories.hyva-themes/factfinder git git@gitlab.hyva.io:hyva-themes/hyva-compat/factfinder.git
+composer require hyva-themes/factfinder
 ```
 
 2. Enable the module
