@@ -1,23 +1,24 @@
 {
-    "name": "develodesign/module-factfinderhyvacompat",
-    "description": "factfinderhyvacompat",
-    "type": "magento2-module",
-    "license": "Apache-2.0",
-    "version": "1.0.0",
-    "authors": [
-        {
-            "name": "Mike Sheward",
-            "email": "mike@develodesign.co.uk"
-        }
+  "name": "hyva-themes/factfinder",
+  "description": "Hyvä Themes Compatibility module for FACT-Finder",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "require": {
+    "magento/framework": "*",
+    "hyva-themes/magento2-compat-module-fallback": "*",
+    "omikron/magento2-factfinder": "*"
+  },
+  "authors": [{
+      "name": "Mike Sheward",
+      "email": "mike@develodesign.co.uk"
+  }],
+  "license": "see LICENSE",
+  "autoload": {
+    "files": [
+      "src/registration.php"
     ],
-    "minimum-stability": "dev",
-    "require": {},
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "Develodesign\\FactfinderHyvaCompat\\": ""
-        }
+    "psr-4": {
+      "Develodesign\\FactfinderHyvaCompat\\": "src/"
     }
+  }
 }
